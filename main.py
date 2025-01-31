@@ -9,3 +9,11 @@ def responder_pergunta(pergunta):
         "qual é a capital do Brasil": "A capital do Brasil é Brasília.",
         "qual é a capital de portugal": "A capital de Portugal é Lisboa."
     }
+
+    pergunta = pergunta.lower()
+    
+    for chave in respostas:
+        if re.search(chave, pergunta):
+            return respostas[chave]
+    
+    return "Desculpe, não entendi. Poderia reformular a pergunta?"
