@@ -17,3 +17,13 @@ def responder_pergunta(pergunta):
             return respostas[chave]
     
     return "Desculpe, não entendi. Poderia reformular a pergunta?"
+
+
+print("Chatbot iniciado! Digite 'sair' para encerrar.")
+while True:
+    usuario = input("Você: ")
+    if usuario.lower() == "sair":
+        print("Chatbot: Até mais!")
+        break
+    resposta = responder_pergunta(usuario)
+    print(f"Chatbot: {resposta}")
